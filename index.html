@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Approval System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-800 grid justify-center gap-3 text-center text-white">
+    <div
+      class="bg-slate-700 w-auto h-auto relative top-24 p-6 rounded-lg shadow-lg"
+    >
+      <h1 class="text-2xl mb-4">Sistema de aprobación</h1>
+      <div>
+        <form id="ticket-form" class="space-y-4">
+          <div>
+            <label for="description" class="block text-left"
+              >Ticket Description:</label
+            >
+            <input
+              type="text"
+              id="description"
+              name="description"
+              class="w-full p-2 mt-1 text-black rounded-md"
+              required
+            />
+          </div>
+          <div>
+            <label for="complejidad" class="block text-left"
+              >Complejidad:</label
+            >
+            <select
+              id="complejidad"
+              name="complejidad"
+              class="w-full p-2 mt-1 text-black rounded-md bg-white"
+            >
+              <option value="Simple">Simple</option>
+              <option value="Medium">Medium</option>
+              <option value="Important">Important</option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-slate-50 text-slate-900 rounded-lg font-bold py-2 mt-4"
+          >
+            Create Ticket
+          </button>
+        </form>
+        <div id="ticket-result" class="mt-6"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
